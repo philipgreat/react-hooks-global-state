@@ -1,17 +1,4 @@
-#通过Global实现封装操作
 
-
-在state/GlobalState.js中，定义自己的hook
-使用方法如下
-
-```
-
-import functions from './state/GlobalState.js'
-
-const {useCounter} = functions
-```
-GlobalState文件解释
-```
 import { createGlobalState } from 'react-hooks-global-state';
  
 const initialState = { count: 0 };
@@ -43,5 +30,4 @@ const functions={
 
 }
 export default functions
-```
 
