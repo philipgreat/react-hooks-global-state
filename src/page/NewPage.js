@@ -5,20 +5,20 @@ import React from 'react';
 
 import functions from '../state/GlobalState.js'
 
-const {useCounter} = functions
+const {useGlobalCounter} = functions
 
 const Page = () => {
-    const [count, changeState] = useCounter();
+    const [count, {decrease,increase}] = useGlobalCounter();
    
-    const {decrease,increase} =changeState
+
 
     return (
-      <div style={{ paddingRight:'10px'}}>
-        <span style={{paddingRight:'20px'}}>Page Counter: {count}</span>
+        <div>
+        <span style={{paddingRight:'20px'}}>Counter: {count}</span>
         {/* update state by passing callback function */}
-        <button onClick={() => decrease()}>+1</button>
+        <button onClick={() => increase()}>+1</button>
         {/* update state by passing new value */}
-        <button onClick={() => increase()}>-1</button>
+        <button onClick={() => decrease()}>-1</button>
       </div>
     );
   };

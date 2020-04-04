@@ -8,7 +8,7 @@
 
 import functions from './state/GlobalState.js'
 
-const {useCounter} = functions
+const {useGlobalCounter} = functions
 ```
 GlobalState文件解释
 ```
@@ -17,7 +17,7 @@ import { createGlobalState } from 'react-hooks-global-state';
 const initialState = { count: 0 };
 const { useGlobalState } = createGlobalState(initialState);
 
-const  useCounter=()=> {
+const  useGlobalCounter=()=> {
     // 接受初始化的值生成state
     const [count, changeCount] = useGlobalState('count');
     // 声明减少的方法
@@ -39,7 +39,7 @@ const  useCounter=()=> {
   
 
 const functions={
-    useGlobalState,useCounter
+    useGlobalState,useGlobalCounter
 
 }
 export default functions
