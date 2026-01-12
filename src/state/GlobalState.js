@@ -22,7 +22,7 @@ const  useGlobalCounter=()=> {
     // 将count数字与方法返回回去
     return [count, { decrease, increase, resetCounter }]
 }
-  
+
 
 
 const functions={

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NewPage  from './page/NewPage.js'
@@ -9,7 +9,10 @@ const {useGlobalCounter} = functions
 
 const Counter = () => {
   const [count, {decrease,increase}] = useGlobalCounter();
-  
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `${count} times`;
+});
   
   return (
     <div>
